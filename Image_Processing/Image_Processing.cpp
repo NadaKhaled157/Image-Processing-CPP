@@ -26,6 +26,8 @@ bool Image_Processing::eventFilter(QObject* watched, QEvent* event) {
 
 void Image_Processing::uploadImage() {
     qDebug() << "INSIDE UPLOAD FUNCTION";
+    /*ui->Widget_Org_Image->setAutoFillBackground(false);*/
+    ui->Widget_Org_Image->setStyleSheet("background: transparent;");
     QString filePath = QFileDialog::getOpenFileName(
         this, "Select an Image", "", "Images (*.png *.jpg *.jpeg *.bmp *.gif)");
 
